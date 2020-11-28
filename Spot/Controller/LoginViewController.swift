@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
                 print("Error: \(error!.localizedDescription)")
                 self.showError("Couldn't sign in")
             } else {
-                self.transitionToHome()
+                self.performSegue(withIdentifier: "ShowHome", sender: nil)
             }
         }
         
@@ -48,13 +48,6 @@ class LoginViewController: UIViewController {
     func showError(_ message: String) {
         errorLabel.text = message
         errorLabel.alpha = 1
-    }
-    
-    func transitionToHome() {
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
     }
     
 }

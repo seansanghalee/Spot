@@ -78,7 +78,7 @@ class SignUpViewController: UIViewController {
                     }
                     
                     // Transition to the home screen
-                    self.transitionToHome()
+                    self.performSegue(withIdentifier: "ShowHome", sender: nil)
                     
                 }
             }
@@ -88,13 +88,6 @@ class SignUpViewController: UIViewController {
     func showError(_ message: String) {
         errorLabel.text = message
         errorLabel.alpha = 1
-    }
-    
-    func transitionToHome() {
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
     }
     
 }
