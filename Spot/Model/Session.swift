@@ -7,6 +7,6 @@
 
 import Foundation
 
-class Workouts {
+class Session {
     var workoutArray: [Workout]!
 }
