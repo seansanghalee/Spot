@@ -8,5 +8,11 @@
 import Foundation
 
 class Session {
-    var workoutArray: [Workout]!
+    var date: Date = Date()
+    var workouts: [Workout] = []
+    var note: String = ""
+    
+    func loadData() {
+        
+    }
 }

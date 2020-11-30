@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		60AD0BB1BECF2F04DDDC4786 /* Pods_Spot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A755802FE603BD9598A7E92D /* Pods_Spot.framework */; };
+		B34EF1772573FC21005C2EA0 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34EF1762573FC21005C2EA0 /* Session.swift */; };
+		B34EF17A25740172005C2EA0 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34EF17925740172005C2EA0 /* WorkoutTableViewCell.swift */; };
 		B351FEEE25718D55005BEC6C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B351FEED25718D55005BEC6C /* Utilities.swift */; };
 		B351FEF1257195A9005BEC6C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B351FEF0257195A9005BEC6C /* Constants.swift */; };
 		B367C26E2572EBFA0014E524 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367C26D2572EBFA0014E524 /* Workout.swift */; };
@@ -17,6 +19,7 @@
 		B3C1DB2125717B4300A19548 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1DB2025717B4300A19548 /* TodayViewController.swift */; };
 		B3C1DB2625717B6C00A19548 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1DB2525717B6C00A19548 /* SignUpViewController.swift */; };
 		B3C1DB2D25717C6C00A19548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1DB2C25717C6C00A19548 /* ViewController.swift */; };
+		B3D7D17B2575643500F0D858 /* WorkoutDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7D17A2575643500F0D858 /* WorkoutDetailViewController.swift */; };
 		B3F2736B257168D500FA81BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2736A257168D500FA81BD /* AppDelegate.swift */; };
 		B3F2736D257168D500FA81BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2736C257168D500FA81BD /* SceneDelegate.swift */; };
 		B3F2736F257168D500FA81BD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2736E257168D500FA81BD /* LoginViewController.swift */; };
@@ -29,6 +32,8 @@
 		82C9461FC28103D827B45937 /* Pods-Spot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spot.debug.xcconfig"; path = "Target Support Files/Pods-Spot/Pods-Spot.debug.xcconfig"; sourceTree = "<group>"; };
 		88791CE77A0047243E30032C /* Pods-Spot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spot.release.xcconfig"; path = "Target Support Files/Pods-Spot/Pods-Spot.release.xcconfig"; sourceTree = "<group>"; };
 		A755802FE603BD9598A7E92D /* Pods_Spot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B34EF1762573FC21005C2EA0 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		B34EF17925740172005C2EA0 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		B351FEED25718D55005BEC6C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		B351FEF0257195A9005BEC6C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B367C26D2572EBFA0014E524 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		B3C1DB2025717B4300A19548 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		B3C1DB2525717B6C00A19548 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B3C1DB2C25717C6C00A19548 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3D7D17A2575643500F0D858 /* WorkoutDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailViewController.swift; sourceTree = "<group>"; };
 		B3F27367257168D500FA81BD /* Spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F2736A257168D500FA81BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3F2736C257168D500FA81BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 		B367C2692572E8850014E524 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B34EF1762573FC21005C2EA0 /* Session.swift */,
 				B367C26D2572EBFA0014E524 /* Workout.swift */,
 			);
 			path = Model;
@@ -97,6 +104,7 @@
 		B367C26B2572E8980014E524 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B34EF17925740172005C2EA0 /* WorkoutTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 				B3C1DB2525717B6C00A19548 /* SignUpViewController.swift */,
 				B3F2736E257168D500FA81BD /* LoginViewController.swift */,
 				B3C1DB2025717B4300A19548 /* TodayViewController.swift */,
+				B3D7D17A2575643500F0D858 /* WorkoutDetailViewController.swift */,
 				B367C276257301980014E524 /* AccountViewController.swift */,
 				B367C279257301A10014E524 /* SettingsViewController.swift */,
 			);
@@ -284,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C1DB2D25717C6C00A19548 /* ViewController.swift in Sources */,
+				B3D7D17B2575643500F0D858 /* WorkoutDetailViewController.swift in Sources */,
 				B3F2736F257168D500FA81BD /* LoginViewController.swift in Sources */,
 				B351FEEE25718D55005BEC6C /* Utilities.swift in Sources */,
 				B3F2736B257168D500FA81BD /* AppDelegate.swift in Sources */,
@@ -291,6 +301,8 @@
 				B367C26E2572EBFA0014E524 /* Workout.swift in Sources */,
 				B3C1DB2125717B4300A19548 /* TodayViewController.swift in Sources */,
 				B3C1DB2625717B6C00A19548 /* SignUpViewController.swift in Sources */,
+				B34EF17A25740172005C2EA0 /* WorkoutTableViewCell.swift in Sources */,
+				B34EF1772573FC21005C2EA0 /* Session.swift in Sources */,
 				B351FEF1257195A9005BEC6C /* Constants.swift in Sources */,
 				B367C277257301980014E524 /* AccountViewController.swift in Sources */,
 				B367C27A257301A10014E524 /* SettingsViewController.swift in Sources */,

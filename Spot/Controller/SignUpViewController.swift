@@ -15,7 +15,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var signUpButton: UIButton!
-    
     @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
@@ -45,7 +44,6 @@ class SignUpViewController: UIViewController {
         }
         
         return nil
-        
     }
     
     @IBAction func signUpTapped(_ sender: UIButton) {
@@ -71,7 +69,7 @@ class SignUpViewController: UIViewController {
                     // User created successfully
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["firstname": firstName, "lastName": lastName, "uid": result!.user.uid]) { (error) in
+                    db.collection("users").addDocument(data: ["firstName": firstName, "lastName": lastName, "uid": result!.user.uid]) { (error) in
                         if error != nil {
                             self.showError("Error adding document")
                         }
@@ -79,7 +77,6 @@ class SignUpViewController: UIViewController {
                     
                     // Transition to the home screen
                     self.performSegue(withIdentifier: "ShowHome", sender: nil)
-                    
                 }
             }
         }
@@ -89,5 +86,4 @@ class SignUpViewController: UIViewController {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
-    
 }

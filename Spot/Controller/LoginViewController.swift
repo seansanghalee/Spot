@@ -22,7 +22,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
-        
         // Validate text fields
         if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
@@ -42,7 +41,6 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: "ShowHome", sender: nil)
             }
         }
-        
     }
     
     func showError(_ message: String) {

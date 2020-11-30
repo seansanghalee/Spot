@@ -8,13 +8,14 @@
 import UIKit
 
 class AccountViewController: UIViewController {
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // set up navigation controller title
+        self.navigationController?.navigationBar.topItem?.title = "Account"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.topItem?.title = "Account"
-    }
-
 }

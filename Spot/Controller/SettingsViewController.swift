@@ -8,14 +8,12 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
+        // set up navigation controller title to setting
         self.navigationController?.navigationBar.topItem?.title = "Settings"
     }
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
