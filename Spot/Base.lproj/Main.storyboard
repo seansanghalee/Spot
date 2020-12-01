@@ -279,7 +279,7 @@
                                         </prototypes>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2021/01/01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spH-bW-J8W">
-                                        <rect key="frame" x="57" y="8" width="256" height="44"/>
+                                        <rect key="frame" x="56" y="8" width="256" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
                                         <nil key="textColor"/>
@@ -434,7 +434,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B0D-Vu-mOb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="WgV-xJ-QMn"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="WgV-xJ-QMn">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="KK7-Nu-R4O" id="GvX-Jf-lew"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="ydp-bM-hPl" id="i6b-6a-N5O"/>

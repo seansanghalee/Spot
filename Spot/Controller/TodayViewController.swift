@@ -23,6 +23,10 @@ class TodayViewController: UIViewController {
         
         // load a session from Firebase. If today's session doesn't exist, create a new session
         
+        if session == nil {
+            session = Session()
+        }
+        
         // load workouts from Firebase using session. If workouts don't exist, create new workouts.
         
     }

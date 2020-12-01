@@ -9,10 +9,10 @@ import Foundation
 import Firebase
 
 class Session {
-    var date: Date = Date()
-    var note: String = ""
-    var userID: String = ""
-    var documentID: String = ""
+    var date: Date
+    var note: String
+    var userID: String
+    var documentID: String
     
     var dictionary: [String: Any] {
         let timeIntervalDate = date.timeIntervalSince1970
@@ -24,6 +24,10 @@ class Session {
         self.note = note
         self.userID = userID
         self.documentID = documentID
+    }
+    
+    convenience init() {
+        self.init(date: Date(), note: "", userID: Auth.auth().currentUser!.uid, documentID: "")
     }
     
     convenience init(dictionary: [String: Any]) {

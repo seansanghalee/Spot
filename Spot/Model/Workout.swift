@@ -25,6 +25,10 @@ class Workout {
         self.documentID = documentID
     }
     
+    convenience init() {
+        self.init(name: "", set: 0, rep: 0, documentID: "")
+    }
+    
     convenience init(dictionary: [String: Any]) {
         let name = dictionary["name"] as! String? ?? ""
         let set = dictionary["set"] as! Int? ?? 0
