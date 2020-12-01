@@ -10,6 +10,7 @@ import UIKit
 
 class Utilities {
     
+    /*
     static func styleTextField(_ textfield:UITextField) {
         
         // Create the bottom line
@@ -43,6 +44,7 @@ class Utilities {
         button.layer.cornerRadius = 25.0
         button.tintColor = UIColor.black
     }
+    */
     
     static func isPasswordValid(_ password : String) -> Bool {
         

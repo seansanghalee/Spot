@@ -14,14 +14,17 @@ class TodayViewController: UIViewController {
     @IBOutlet weak var noteLabel: UILabel!
     
     var dateFormatter = DateFormatter()
-    var session = Session()
+    var session: Session!
+    var workouts: Workouts!
     
     override func viewWillAppear(_ animated: Bool) {
         // set up navigation controller title
         self.navigationController?.navigationBar.topItem?.title = "Today"
         
-        // loads session data from Firebase
-        session.loadData()
+        // load a session from Firebase. If today's session doesn't exist, create a new session
+        
+        // load workouts from Firebase using session. If workouts don't exist, create new workouts.
+        
     }
     
     override func viewDidLoad() {
@@ -31,32 +34,64 @@ class TodayViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        
-        session.date = Date()
-        session.workouts = [Workout(name: "Bench Press", set: 4, rep: 12), Workout(name: "Incline Press", set: 4, rep: 12), Workout(name: "Dips", set: 4, rep: 15), Workout(name: "Chest Fly", set: 4, rep: 12)]
-        session.note = "Feeling great."
-        
-        dateLabel.text = "\(dateFormatter.string(from: session.date))"
-        noteLabel.text = session.note
+//        updateUI()
     }
     
+//    func updateUI() {
+//        dateFormatter.dateStyle = .medium
+//        dateFormatter.timeStyle = .none
+//
+//        session.date = Date()
+//        session.note = "Feeling great."
+//
+//        dateLabel.text = "\(dateFormatter.string(from: session.date))"
+//        noteLabel.text = session.note
+//    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowWorkoutDetail" {
+        // a table view cell is pressed
+        if segue.identifier == "EditWorkout" {
             let destination = segue.destination as! WorkoutDetailViewController
             let index = tableView.indexPathForSelectedRow!.row
-            destination.workout = session.workouts[index]
+            destination.workout = workouts.workoutArray[index]
+        }
+        // plus button is pressed
+        else {
+            // deselect if a cell is already selected
+            if let selectedPath = tableView.indexPathForSelectedRow {
+                tableView.deselectRow(at: selectedPath, animated: false)
+            }
+        }
+    }
+    
+    @IBAction func unwindFromWorkoutDetailViewController(segue: UIStoryboardSegue) {
+        let source = segue.source as! WorkoutDetailViewController
+        // set workout object to retrieve
+        if let indexPath = tableView.indexPathForSelectedRow {
+            workouts.workoutArray[indexPath.row] = source.workout!
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        else {
+            let newIndexPath = IndexPath(row: workouts.workoutArray.count, section: 0)
+            workouts.workoutArray.append(source.workout!)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
     }
     
     @IBAction func leftButtonPressed(_ sender: UIButton) {
+        // load previous session
     }
+    
     @IBAction func rightButtonPressed(_ sender: UIButton) {
+        // load next session
     }
+    
     @IBAction func plusButtonPressed(_ sender: UIButton) {
+        // add a new workout to the workout list
     }
+    
     @IBAction func noteButtonPressed(_ sender: UIButton) {
+        // edit noes
     }
     
 }
@@ -64,14 +99,14 @@ class TodayViewController: UIViewController {
 extension TodayViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return session.workouts.count
+        return workouts.workoutArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! WorkoutTableViewCell
-        cell.nameLabel.text = "\(session.workouts[indexPath.row].name)"
-        cell.setLabel.text = "\(session.workouts[indexPath.row].set)"
-        cell.repLabel.text = "\(session.workouts[indexPath.row].rep)"
+        cell.nameLabel.text = "\(workouts.workoutArray[indexPath.row].name)"
+        cell.setLabel.text = "\(workouts.workoutArray[indexPath.row].set)"
+        cell.repLabel.text = "\(workouts.workoutArray[indexPath.row].rep)"
         return cell
     }
     

@@ -17,9 +17,9 @@ class WorkoutDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameTextField.text = workout.name
-        setTextField.text = "\(workout.set)"
-        repTextField.text = "\(workout.rep)"
+        nameTextField.text = ""
+        setTextField.text = ""
+        repTextField.text = ""
     }
 
 }

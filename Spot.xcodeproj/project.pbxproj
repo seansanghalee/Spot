@@ -16,6 +16,7 @@
 		B367C277257301980014E524 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367C276257301980014E524 /* AccountViewController.swift */; };
 		B367C27A257301A10014E524 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367C279257301A10014E524 /* SettingsViewController.swift */; };
 		B370901125716A620058D245 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B370901025716A620058D245 /* GoogleService-Info.plist */; };
+		B399AE0425757F4600269EE8 /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399AE0325757F4600269EE8 /* Workouts.swift */; };
 		B3C1DB2125717B4300A19548 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1DB2025717B4300A19548 /* TodayViewController.swift */; };
 		B3C1DB2625717B6C00A19548 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1DB2525717B6C00A19548 /* SignUpViewController.swift */; };
 		B3C1DB2D25717C6C00A19548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1DB2C25717C6C00A19548 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		B367C276257301980014E524 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		B367C279257301A10014E524 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B370901025716A620058D245 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B399AE0325757F4600269EE8 /* Workouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
 		B3C1DB2025717B4300A19548 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		B3C1DB2525717B6C00A19548 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B3C1DB2C25717C6C00A19548 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				B34EF1762573FC21005C2EA0 /* Session.swift */,
 				B367C26D2572EBFA0014E524 /* Workout.swift */,
+				B399AE0325757F4600269EE8 /* Workouts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				B3C1DB2625717B6C00A19548 /* SignUpViewController.swift in Sources */,
 				B34EF17A25740172005C2EA0 /* WorkoutTableViewCell.swift in Sources */,
 				B34EF1772573FC21005C2EA0 /* Session.swift in Sources */,
+				B399AE0425757F4600269EE8 /* Workouts.swift in Sources */,
 				B351FEF1257195A9005BEC6C /* Constants.swift in Sources */,
 				B367C277257301980014E524 /* AccountViewController.swift in Sources */,
 				B367C27A257301A10014E524 /* SettingsViewController.swift in Sources */,

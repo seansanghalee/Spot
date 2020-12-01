@@ -11,6 +11,4 @@ class WorkoutTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var setLabel: UILabel!
     @IBOutlet weak var repLabel: UILabel!
-    
-    
 }

@@ -50,10 +50,12 @@ class SignUpViewController: UIViewController {
         
         // Validate the fields
         let error = validateFields()
-        
+
         if error != nil {
             showError(error!)
-        } else {
+        }
+        
+        else {
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
