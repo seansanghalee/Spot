@@ -32,8 +32,10 @@ class Workouts {
             
             for document in querySnapshot!.documents {
                 let workout = Workout(dictionary: document.data())
+                workout.documentID = document.documentID
                 self.workoutArray.append(workout)
             }
+            completed()
         }
     }
 }

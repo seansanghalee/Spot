@@ -18,23 +18,34 @@ class Workout {
         return ["name": name, "set": set, "rep": rep, "documentID": documentID]
     }
     
-    init(name: String, set: Int, rep: Int, documentID: String) {
+    init(name: String, set: Int, rep: Int) {
         self.name = name
         self.set = set
         self.rep = rep
-        self.documentID = documentID
     }
     
+//    init(name: String, set: Int, rep: Int, documentID: String) {
+//        self.name = name
+//        self.set = set
+//        self.rep = rep
+//        self.documentID = documentID
+//    }
+    
     convenience init() {
-        self.init(name: "", set: 0, rep: 0, documentID: "")
+        self.init(name: "", set: 0, rep: 0)
     }
+    
+//    convenience init() {
+//        self.init(name: "", set: 0, rep: 0, documentID: "")
+//    }
     
     convenience init(dictionary: [String: Any]) {
         let name = dictionary["name"] as! String? ?? ""
         let set = dictionary["set"] as! Int? ?? 0
         let rep = dictionary["rep"] as! Int? ?? 0
-        let documentID = dictionary["documentID"] as! String? ?? ""
-        self.init(name: name, set: set, rep: rep, documentID: documentID)
+//        let documentID = dictionary["documentID"] as! String? ?? ""
+        self.init(name: name, set: set, rep: rep)
+//        self.init(name: name, set: set, rep: rep, documentID: documentID)
     }
     
     func saveData(session: Session, completion: @escaping (Bool) ->()) {

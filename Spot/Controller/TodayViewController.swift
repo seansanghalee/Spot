@@ -23,22 +23,25 @@ class TodayViewController: UIViewController {
         
         // load a session from Firebase. If today's session doesn't exist, create a new session
         
-        if session == nil {
-            session = Session()
-        }
-        
         // load workouts from Firebase using session. If workouts don't exist, create new workouts.
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        session = Session()
+        workouts = Workouts()
         
         // set up table view
         tableView.delegate = self
         tableView.dataSource = self
         
 //        updateUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        session.loadData {
+        }
     }
     
 //    func updateUI() {
