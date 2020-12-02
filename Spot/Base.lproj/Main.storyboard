@@ -373,39 +373,39 @@
             <objects>
                 <viewController id="KK7-Nu-R4O" customClass="WorkoutDetailViewController" customModule="Spot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QWO-be-P7h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydp-bM-hPl">
-                                <rect key="frame" x="16" y="94" width="343" height="34"/>
+                                <rect key="frame" x="16" y="106" width="343" height="34"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sets" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N9m-UX-BHQ">
-                                <rect key="frame" x="16" y="178" width="343" height="34"/>
+                                <rect key="frame" x="16" y="190" width="343" height="34"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm8-2l-wDl">
-                                <rect key="frame" x="16" y="60" width="343" height="26"/>
+                                <rect key="frame" x="16" y="72" width="343" height="26"/>
                                 <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd4-qc-1hG">
-                                <rect key="frame" x="16" y="228" width="343" height="26"/>
+                                <rect key="frame" x="16" y="240" width="343" height="26"/>
                                 <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTQ-kh-N7e">
-                                <rect key="frame" x="16" y="144" width="343" height="26"/>
+                                <rect key="frame" x="16" y="156" width="343" height="26"/>
                                 <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pxb-ed-XSy">
-                                <rect key="frame" x="16" y="262" width="343" height="34"/>
+                                <rect key="frame" x="16" y="274" width="343" height="34"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -579,7 +579,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="r20-Iq-oSN"/>
-        <segue reference="wPo-s9-e2p"/>
+        <segue reference="vn0-la-jdi"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>

@@ -16,7 +16,7 @@ class Session {
     
     var dictionary: [String: Any] {
         let timeIntervalDate = date.timeIntervalSince1970
-        return ["date": timeIntervalDate, "note": note, "userID": userID, "documentID": documentID]
+        return ["date": timeIntervalDate, "note": note, "userID": userID]
     }
     
     init(date: Date, note: String, userID: String, documentID: String) {
@@ -33,7 +33,7 @@ class Session {
     convenience init(dictionary: [String: Any]) {
         let timeIntervalDate = dictionary["date"] as! TimeInterval? ?? TimeInterval()
         let date = Date(timeIntervalSince1970: timeIntervalDate)
-        let note = dictionary["name"] as! String? ?? ""
+        let note = dictionary["note"] as! String? ?? ""
         let userID = dictionary["userID"] as! String? ?? ""
         let documentID = dictionary["documentID"] as! String? ?? ""
         self.init(date: date, note: note, userID: userID, documentID: documentID)
@@ -91,15 +91,21 @@ class Session {
             
             for document in querySnapshot!.documents {
                 let session = Session(dictionary: document.data())
-                if session.userID == Auth.auth().currentUser?.uid && session.date == Date() {
+                if session.userID == Auth.auth().currentUser?.uid && self.isSameDay(date1: session.date, date2: Date()) {
                     self.date = session.date
                     self.note = session.note
                     self.userID = session.userID
-                    self.documentID = session.documentID
+                    self.documentID = document.documentID
                 }
             }
             
             completed()
         }
+    }
+    
+    func isSameDay(date1: Date, date2: Date) -> Bool {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone.current
+        return calendar.isDate(date1, equalTo: date2, toGranularity: .day)
     }
 }

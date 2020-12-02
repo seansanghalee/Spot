@@ -35,25 +35,26 @@ class TodayViewController: UIViewController {
         // set up table view
         tableView.delegate = self
         tableView.dataSource = self
-        
-//        updateUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         session.loadData {
+            self.updateUI()
         }
+//        session.saveData { (success) in
+//            if !success {
+//                print("Error saving data")
+//            }
+//        }
     }
     
-//    func updateUI() {
-//        dateFormatter.dateStyle = .medium
-//        dateFormatter.timeStyle = .none
-//
-//        session.date = Date()
-//        session.note = "Feeling great."
-//
-//        dateLabel.text = "\(dateFormatter.string(from: session.date))"
-//        noteLabel.text = session.note
-//    }
+    func updateUI() {
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+
+        dateLabel.text = "\(dateFormatter.string(from: session.date))"
+        noteLabel.text = session.note
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // a table view cell is pressed
@@ -61,6 +62,7 @@ class TodayViewController: UIViewController {
             let destination = segue.destination as! WorkoutDetailViewController
             let index = tableView.indexPathForSelectedRow!.row
             destination.workout = workouts.workoutArray[index]
+            destination.session = session
         }
         // plus button is pressed
         else {
@@ -68,6 +70,8 @@ class TodayViewController: UIViewController {
             if let selectedPath = tableView.indexPathForSelectedRow {
                 tableView.deselectRow(at: selectedPath, animated: false)
             }
+            let destination = segue.destination as! UINavigationController
+            // destination.session = session
         }
     }
     
