@@ -8,6 +8,8 @@
 import UIKit
 
 class NoteDetailViewController: UIViewController {
+    
+    var session: Session!
 
     override func viewDidLoad() {
         super.viewDidLoad()

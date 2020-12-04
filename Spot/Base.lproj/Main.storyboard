@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gym" translatesAutoresizingMaskIntoConstraints="NO" id="Nzc-bV-3Gc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="onP-Pg-6m6">
                                 <rect key="frame" x="40" y="84" width="295" height="200.5"/>
                                 <subviews>
@@ -58,8 +61,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Nzc-bV-3Gc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7iE-fP-sGb"/>
+                            <constraint firstItem="Nzc-bV-3Gc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AJu-s0-Txh"/>
                             <constraint firstItem="onP-Pg-6m6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="QWH-R3-zKB"/>
+                            <constraint firstItem="Nzc-bV-3Gc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ebq-o4-NQ4"/>
                             <constraint firstItem="onP-Pg-6m6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="f9W-dR-Y5j"/>
+                            <constraint firstItem="Nzc-bV-3Gc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iPK-7G-1Qm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="onP-Pg-6m6" secondAttribute="trailing" constant="40" id="ieV-Wy-qx5"/>
                         </constraints>
                     </view>
@@ -74,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2614" y="465"/>
+            <point key="canvasLocation" x="2613.5999999999999" y="464.6176911544228"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="a6H-YU-c4d">
@@ -84,6 +91,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gym" translatesAutoresizingMaskIntoConstraints="NO" id="zJp-H8-u1d">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pl6-27-6Bo">
                                 <rect key="frame" x="40" y="84" width="295" height="320.5"/>
                                 <subviews>
@@ -137,6 +147,10 @@
                         <viewLayoutGuide key="safeArea" id="ihe-qc-r6O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zJp-H8-u1d" firstAttribute="leading" secondItem="ihe-qc-r6O" secondAttribute="leading" id="2Ps-Kc-QBb"/>
+                            <constraint firstItem="zJp-H8-u1d" firstAttribute="bottom" secondItem="ihe-qc-r6O" secondAttribute="bottom" id="CAH-v9-bCV"/>
+                            <constraint firstItem="zJp-H8-u1d" firstAttribute="top" secondItem="gHL-A8-BDa" secondAttribute="top" id="PoJ-LC-sDg"/>
+                            <constraint firstItem="zJp-H8-u1d" firstAttribute="trailing" secondItem="ihe-qc-r6O" secondAttribute="trailing" id="T3g-Ug-W1p"/>
                             <constraint firstItem="ihe-qc-r6O" firstAttribute="trailing" secondItem="pl6-27-6Bo" secondAttribute="trailing" constant="40" id="T9R-a0-hwh"/>
                             <constraint firstItem="pl6-27-6Bo" firstAttribute="leading" secondItem="ihe-qc-r6O" secondAttribute="leading" constant="40" id="jGt-Bq-qdV"/>
                             <constraint firstItem="pl6-27-6Bo" firstAttribute="top" secondItem="ihe-qc-r6O" secondAttribute="top" constant="40" id="sJa-St-BhY"/>
@@ -155,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cO-8A-DeB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2614" y="-251"/>
+            <point key="canvasLocation" x="2613.5999999999999" y="-251.42428785607197"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6lG-xT-a9o">
@@ -165,6 +179,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gym" translatesAutoresizingMaskIntoConstraints="NO" id="AA1-sx-rQm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="utL-0g-bhP">
                                 <rect key="frame" x="40" y="537" width="295" height="90"/>
                                 <subviews>
@@ -177,7 +194,7 @@
                                         <color key="tintColor" name="Spot"/>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
-                                            <segue destination="yme-K5-LtB" kind="show" id="XyU-CO-as1"/>
+                                            <segue destination="yme-K5-LtB" kind="show" animates="NO" id="XyU-CO-as1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4h-kT-Q9O">
@@ -186,7 +203,7 @@
                                         <color key="tintColor" name="Spot"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="f11-Hw-h2g"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="f11-Hw-h2g"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -194,12 +211,24 @@
                                     <constraint firstItem="P4h-kT-Q9O" firstAttribute="height" secondItem="FDD-yz-Vt1" secondAttribute="height" multiplier="0.75" id="Kvv-kb-7CU"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRO-Fb-Z9d">
+                                <rect key="frame" x="112.5" y="290" width="150" height="87.5"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="69"/>
+                                <color key="textColor" name="SpotWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lY1-yb-6Wu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lY1-yb-6Wu" firstAttribute="bottom" secondItem="utL-0g-bhP" secondAttribute="bottom" constant="40" id="7Qn-3F-Z9d"/>
+                            <constraint firstItem="zRO-Fb-Z9d" firstAttribute="centerY" secondItem="89h-r6-jgk" secondAttribute="centerY" id="BAJ-In-AMj"/>
+                            <constraint firstItem="AA1-sx-rQm" firstAttribute="bottom" secondItem="lY1-yb-6Wu" secondAttribute="bottom" id="IBU-Vl-qvY"/>
                             <constraint firstItem="utL-0g-bhP" firstAttribute="leading" secondItem="lY1-yb-6Wu" secondAttribute="leading" constant="40" id="K2V-1p-x0s"/>
+                            <constraint firstItem="AA1-sx-rQm" firstAttribute="trailing" secondItem="lY1-yb-6Wu" secondAttribute="trailing" id="OB5-op-xM1"/>
+                            <constraint firstItem="AA1-sx-rQm" firstAttribute="leading" secondItem="lY1-yb-6Wu" secondAttribute="leading" id="QNa-qG-evk"/>
+                            <constraint firstItem="zRO-Fb-Z9d" firstAttribute="centerX" secondItem="89h-r6-jgk" secondAttribute="centerX" id="ReY-lT-q9m"/>
+                            <constraint firstItem="AA1-sx-rQm" firstAttribute="top" secondItem="89h-r6-jgk" secondAttribute="top" id="u4a-08-AMz"/>
                             <constraint firstItem="lY1-yb-6Wu" firstAttribute="trailing" secondItem="utL-0g-bhP" secondAttribute="trailing" constant="40" id="xma-3u-xjG"/>
                         </constraints>
                     </view>
@@ -207,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7le-gM-n8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1831" y="118"/>
+            <point key="canvasLocation" x="1829.5999999999999" y="117.39130434782609"/>
         </scene>
         <!--Today-->
         <scene sceneID="fHa-AX-hoH">
@@ -341,7 +370,6 @@
                                         <state key="normal" image="note.text.badge.plus" catalog="system"/>
                                         <connections>
                                             <action selector="noteButtonPressed:" destination="0R8-bW-XXN" eventType="touchUpInside" id="7hy-bw-cdE"/>
-                                            <segue destination="K84-2k-1nL" kind="show" identifier="EditNote" id="wWG-dP-eZu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -363,6 +391,7 @@
                         <outlet property="dateLabel" destination="spH-bW-J8W" id="eTD-Kv-cGa"/>
                         <outlet property="noteLabel" destination="98L-iZ-bpG" id="o5q-Le-2XM"/>
                         <outlet property="tableView" destination="wKM-kn-fV8" id="4tg-kK-U0t"/>
+                        <segue destination="K84-2k-1nL" kind="show" identifier="EditNote" id="93c-8u-Zi1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uct-ub-P1E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -638,10 +667,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="r20-Iq-oSN"/>
+        <segue reference="i8z-wk-fDO"/>
         <segue reference="wPo-s9-e2p"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Gym" width="4000" height="6000"/>
         <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
         <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
@@ -651,6 +681,9 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="Spot">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="SpotWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

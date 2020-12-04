@@ -24,18 +24,21 @@ class TodayViewController: UIViewController {
         // load a session from Firebase. If today's session doesn't exist, create a new session
         session = Session()
         session.loadData {
+            print("Session loaded: \(self.session.documentID)")
             self.updateUI()
         }
         
         // load workouts from Firebase using session. If workouts don't exist, create new workouts.
         workouts = Workouts()
         workouts.loadData(session: session) {
-            self.updateUI()
+            print("Workouts loaded: \(self.workouts.workoutArray)")
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        clearUI()
         
         // set up table view
         tableView.delegate = self
@@ -44,10 +47,14 @@ class TodayViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         session.saveData { (success) in
-            if !success {
+            if success {
+                print("Session saved: \(self.session.documentID)")
+            } else {
                 print("Error saving data")
             }
         }
+        
+        tableView.reloadData()
     }
     
     func clearUI() {
@@ -58,7 +65,7 @@ class TodayViewController: UIViewController {
     func updateUI() {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
-
+        
         dateLabel.text = "\(dateFormatter.string(from: session.date))"
         noteLabel.text = session.note
     }
@@ -82,12 +89,13 @@ class TodayViewController: UIViewController {
             let destination = navigationController.viewControllers.first as! WorkoutDetailViewController
             destination.session = session
             
-//        case "EditNote":
-//            let destination = segue.destination as! NoteDetailViewController
+        case "EditNote":
+            let destination = segue.destination as! NoteDetailViewController
+            destination.session = session
+            
             
         default:
             print("Could not find segue identifier: \(segue.identifier!)")
-            
         }
     }
     
@@ -119,7 +127,7 @@ class TodayViewController: UIViewController {
     }
     
     @IBAction func plusButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "AddWorkout", sender: nil)
+//        performSegue(withIdentifier: "AddWorkout", sender: nil)
     }
     
     @IBAction func noteButtonPressed(_ sender: UIButton) {
