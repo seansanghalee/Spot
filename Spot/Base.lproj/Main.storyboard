@@ -23,13 +23,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="onP-Pg-6m6">
                                 <rect key="frame" x="40" y="84" width="295" height="200.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-Iq-ey0">
+                                    <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-Iq-ey0">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
+                                        <color key="backgroundColor" name="SpotWhite"/>
                                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vd4-J1-9eM">
+                                    <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vd4-J1-9eM">
                                         <rect key="frame" x="0.0" y="60" width="295" height="40"/>
+                                        <color key="backgroundColor" name="SpotWhite"/>
                                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -38,9 +40,11 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="14N-Lk-12J"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
                                         <color key="tintColor" name="Spot"/>
-                                        <state key="normal" title="Login"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" name="SpotWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W32-62-YGd"/>
                                         </connections>
@@ -97,23 +101,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pl6-27-6Bo">
                                 <rect key="frame" x="40" y="84" width="295" height="320.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQZ-H3-zF2">
+                                    <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQZ-H3-zF2">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="40"/>
+                                        <color key="backgroundColor" name="SpotWhite"/>
                                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfy-Cs-5Uv">
+                                    <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfy-Cs-5Uv">
                                         <rect key="frame" x="0.0" y="60" width="295" height="40"/>
+                                        <color key="backgroundColor" name="SpotWhite"/>
                                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r0e-pT-OAL">
+                                    <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r0e-pT-OAL">
                                         <rect key="frame" x="0.0" y="120" width="295" height="40"/>
+                                        <color key="backgroundColor" name="SpotWhite"/>
                                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKA-GC-ZfY">
+                                    <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKA-GC-ZfY">
                                         <rect key="frame" x="0.0" y="180" width="295" height="40"/>
+                                        <color key="backgroundColor" name="SpotWhite"/>
                                         <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -122,9 +130,11 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="GNq-SW-v0D"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
                                         <color key="tintColor" name="Spot"/>
-                                        <state key="normal" title="Sign Up"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" name="SpotWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="signUpTapped:" destination="yme-K5-LtB" eventType="touchUpInside" id="KcL-lg-7R9"/>
                                         </connections>
@@ -190,7 +200,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="oHo-AJ-p6A"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
                                         <color key="tintColor" name="Spot"/>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
@@ -199,9 +209,11 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4h-kT-Q9O">
                                         <rect key="frame" x="0.0" y="60" width="295" height="30"/>
-                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="17"/>
                                         <color key="tintColor" name="Spot"/>
-                                        <state key="normal" title="Login"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" name="SpotWhite"/>
+                                        </state>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="f11-Hw-h2g"/>
                                         </connections>
@@ -528,6 +540,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HJY-0K-KXc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="SpotBlack"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                         </textAttributes>
@@ -689,6 +702,9 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="Spot">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="SpotBlack">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="SpotWhite">
