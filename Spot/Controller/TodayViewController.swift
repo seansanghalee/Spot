@@ -84,7 +84,6 @@ class TodayViewController: UIViewController {
             if let selectedPath = tableView.indexPathForSelectedRow {
                 tableView.deselectRow(at: selectedPath, animated: false)
             }
-            
             let navigationController = segue.destination as! UINavigationController
             let destination = navigationController.viewControllers.first as! WorkoutDetailViewController
             destination.session = session
@@ -99,24 +98,24 @@ class TodayViewController: UIViewController {
         }
     }
     
-    @IBAction func unwindFromWorkoutDetailViewController(segue: UIStoryboardSegue) {
-        let source = segue.source as! WorkoutDetailViewController
-        
-        // set workout object to retrieve
-        if let indexPath = tableView.indexPathForSelectedRow {
-            workouts.workoutArray[indexPath.row] = source.workout!
-            tableView.reloadRows(at: [indexPath], with: .automatic)
-        }
-        else {
-            let newIndexPath = IndexPath(row: workouts.workoutArray.count, section: 0)
-            workouts.workoutArray.append(source.workout!)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-        print(workouts.workoutArray)
-    }
+//    @IBAction func unwindFromWorkoutDetailViewController(segue: UIStoryboardSegue) {
+//        let source = segue.source as! WorkoutDetailViewController
+//        
+//        // set workout object to retrieve
+//        if let indexPath = tableView.indexPathForSelectedRow {
+//            workouts.workoutArray[indexPath.row] = source.workout!
+//            tableView.reloadRows(at: [indexPath], with: .automatic)
+//        }
+//        else {
+//            let newIndexPath = IndexPath(row: workouts.workoutArray.count, section: 0)
+//            workouts.workoutArray.append(source.workout!)
+//            tableView.insertRows(at: [newIndexPath], with: .automatic)
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        }
+//        print(workouts.workoutArray)
+//    }
     
     @IBAction func leftButtonPressed(_ sender: UIButton) {
         // load previous session
