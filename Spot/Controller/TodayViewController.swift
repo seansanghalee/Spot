@@ -30,9 +30,6 @@ class TodayViewController: UIViewController {
         
         // load workouts from Firebase using session. If workouts don't exist, create new workouts.
         workouts = Workouts()
-        workouts.loadData(session: session) {
-            print("Workouts loaded: \(self.workouts.workoutArray)")
-        }
     }
     
     override func viewDidLoad() {
@@ -46,6 +43,11 @@ class TodayViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        workouts.loadData(session: session) {
+            print("Workouts loaded: \(self.workouts.workoutArray)")
+            self.tableView.reloadData()
+        }
+        
         session.saveData { (success) in
             if success {
                 print("Session saved: \(self.session.documentID)")
@@ -53,8 +55,6 @@ class TodayViewController: UIViewController {
                 print("Error saving data")
             }
         }
-        
-        tableView.reloadData()
     }
     
     func clearUI() {

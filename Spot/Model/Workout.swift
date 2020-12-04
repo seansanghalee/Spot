@@ -10,42 +10,30 @@ import Firebase
 
 class Workout {
     var name: String = ""
-    var set: Int = 0
-    var rep: Int = 0
+    var set: String = ""
+    var rep: String = ""
     var documentID: String = ""
     
     var dictionary: [String: Any] {
         return ["name": name, "set": set, "rep": rep]
     }
     
-    init(name: String, set: Int, rep: Int) {
+    init(name: String, set: String, rep: String) {
         self.name = name
         self.set = set
         self.rep = rep
+        self.documentID = ""
     }
-    
-//    init(name: String, set: Int, rep: Int, documentID: String) {
-//        self.name = name
-//        self.set = set
-//        self.rep = rep
-//        self.documentID = documentID
-//    }
     
     convenience init() {
-        self.init(name: "", set: 0, rep: 0)
+        self.init(name: "", set: "", rep: "")
     }
-    
-//    convenience init() {
-//        self.init(name: "", set: 0, rep: 0, documentID: "")
-//    }
     
     convenience init(dictionary: [String: Any]) {
         let name = dictionary["name"] as! String? ?? ""
-        let set = dictionary["set"] as! Int? ?? 0
-        let rep = dictionary["rep"] as! Int? ?? 0
-//        let documentID = dictionary["documentID"] as! String? ?? ""
+        let set = dictionary["set"] as! String? ?? ""
+        let rep = dictionary["rep"] as! String? ?? ""
         self.init(name: name, set: set, rep: rep)
-//        self.init(name: name, set: set, rep: rep, documentID: documentID)
     }
     
     func saveData(session: Session, completion: @escaping (Bool) ->()) {

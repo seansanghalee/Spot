@@ -27,24 +27,14 @@ class WorkoutDetailViewController: UIViewController {
     
     func updateUI() {
         nameTextField.text = workout.name
-        
-        if workout.set == 0 {
-            setTextField.text = ""
-        } else {
-            setTextField.text = "\(workout.set)"
-        }
-        
-        if workout.rep == 0 {
-            repTextField.text = ""
-        } else {
-            repTextField.text = "\(workout.rep)"
-        }
+        setTextField.text = workout.set
+        repTextField.text = workout.rep
     }
     
     func updateFromUI() {
         workout.name = nameTextField.text!
-        workout.set = Int(setTextField.text!)!
-        workout.rep = Int(repTextField.text!)!
+        workout.set = setTextField.text!
+        workout.rep = repTextField.text!
     }
     
     func leaveViewController() {
@@ -56,7 +46,7 @@ class WorkoutDetailViewController: UIViewController {
             navigationController?.popViewController(animated: true)
         }
     }
-
+    
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         updateFromUI()
         

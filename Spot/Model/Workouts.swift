@@ -22,7 +22,7 @@ class Workouts {
             return
         }
         
-        db.collection("session").document(session.documentID).collection("workouts").addSnapshotListener { (querySnapshot, error) in
+        db.collection("sessions").document(session.documentID).collection("workouts").addSnapshotListener { (querySnapshot, error) in
             guard error == nil else {
                 print("Error adding snapshot listener: \(error!.localizedDescription)")
                 return
