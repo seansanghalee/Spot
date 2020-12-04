@@ -59,11 +59,12 @@ class WorkoutDetailViewController: UIViewController {
 
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         updateFromUI()
+        
         workout.saveData(session: session) { (success) in
             if success {
                 self.leaveViewController()
             } else {
-                // save failed
+                print("Unable to save data")
             }
         }
     }

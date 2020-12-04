@@ -96,9 +96,9 @@ class Session {
                     self.note = session.note
                     self.userID = session.userID
                     self.documentID = document.documentID
+                    return completed()
                 }
             }
-            
             completed()
         }
     }

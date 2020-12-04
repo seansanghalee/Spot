@@ -22,15 +22,20 @@ class TodayViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = "Today"
         
         // load a session from Firebase. If today's session doesn't exist, create a new session
+        session = Session()
+        session.loadData {
+            self.updateUI()
+        }
         
         // load workouts from Firebase using session. If workouts don't exist, create new workouts.
-        
+        workouts = Workouts()
+        workouts.loadData(session: session) {
+            self.updateUI()
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        session = Session()
-        workouts = Workouts()
         
         // set up table view
         tableView.delegate = self
@@ -38,14 +43,16 @@ class TodayViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        session.loadData {
-            self.updateUI()
+        session.saveData { (success) in
+            if !success {
+                print("Error saving data")
+            }
         }
-//        session.saveData { (success) in
-//            if !success {
-//                print("Error saving data")
-//            }
-//        }
+    }
+    
+    func clearUI() {
+        dateLabel.text = ""
+        noteLabel.text = ""
     }
     
     func updateUI() {
@@ -58,25 +65,35 @@ class TodayViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // a table view cell is pressed
-        if segue.identifier == "EditWorkout" {
+        switch segue.identifier ?? "" {
+        
+        case "EditWorkout":
             let destination = segue.destination as! WorkoutDetailViewController
             let index = tableView.indexPathForSelectedRow!.row
             destination.workout = workouts.workoutArray[index]
             destination.session = session
-        }
-        // plus button is pressed
-        else {
-            // deselect if a cell is already selected
+            
+        case "AddWorkout":
             if let selectedPath = tableView.indexPathForSelectedRow {
                 tableView.deselectRow(at: selectedPath, animated: false)
             }
-            let destination = segue.destination as! UINavigationController
-            // destination.session = session
+            
+            let navigationController = segue.destination as! UINavigationController
+            let destination = navigationController.viewControllers.first as! WorkoutDetailViewController
+            destination.session = session
+            
+//        case "EditNote":
+//            let destination = segue.destination as! NoteDetailViewController
+            
+        default:
+            print("Could not find segue identifier: \(segue.identifier!)")
+            
         }
     }
     
     @IBAction func unwindFromWorkoutDetailViewController(segue: UIStoryboardSegue) {
         let source = segue.source as! WorkoutDetailViewController
+        
         // set workout object to retrieve
         if let indexPath = tableView.indexPathForSelectedRow {
             workouts.workoutArray[indexPath.row] = source.workout!
@@ -86,7 +103,11 @@ class TodayViewController: UIViewController {
             let newIndexPath = IndexPath(row: workouts.workoutArray.count, section: 0)
             workouts.workoutArray.append(source.workout!)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
+        print(workouts.workoutArray)
     }
     
     @IBAction func leftButtonPressed(_ sender: UIButton) {
@@ -98,11 +119,11 @@ class TodayViewController: UIViewController {
     }
     
     @IBAction func plusButtonPressed(_ sender: UIButton) {
-        // add a new workout to the workout list
+        performSegue(withIdentifier: "AddWorkout", sender: nil)
     }
     
     @IBAction func noteButtonPressed(_ sender: UIButton) {
-        // edit noes
+        performSegue(withIdentifier: "EditNote", sender: nil)
     }
     
 }

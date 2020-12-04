@@ -279,7 +279,7 @@
                                         </prototypes>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2021/01/01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spH-bW-J8W">
-                                        <rect key="frame" x="56" y="8" width="256" height="44"/>
+                                        <rect key="frame" x="54" y="8" width="256" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="30"/>
                                         <nil key="textColor"/>
@@ -341,6 +341,7 @@
                                         <state key="normal" image="note.text.badge.plus" catalog="system"/>
                                         <connections>
                                             <action selector="noteButtonPressed:" destination="0R8-bW-XXN" eventType="touchUpInside" id="7hy-bw-cdE"/>
+                                            <segue destination="K84-2k-1nL" kind="show" identifier="EditNote" id="wWG-dP-eZu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -373,39 +374,39 @@
             <objects>
                 <viewController id="KK7-Nu-R4O" customClass="WorkoutDetailViewController" customModule="Spot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QWO-be-P7h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydp-bM-hPl">
-                                <rect key="frame" x="16" y="106" width="343" height="34"/>
+                                <rect key="frame" x="16" y="94" width="343" height="34"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sets" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N9m-UX-BHQ">
-                                <rect key="frame" x="16" y="190" width="343" height="34"/>
+                                <rect key="frame" x="16" y="178" width="343" height="34"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm8-2l-wDl">
-                                <rect key="frame" x="16" y="72" width="343" height="26"/>
+                                <rect key="frame" x="16" y="60" width="343" height="26"/>
                                 <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Reps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd4-qc-1hG">
-                                <rect key="frame" x="16" y="240" width="343" height="26"/>
+                                <rect key="frame" x="16" y="228" width="343" height="26"/>
                                 <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTQ-kh-N7e">
-                                <rect key="frame" x="16" y="156" width="343" height="26"/>
+                                <rect key="frame" x="16" y="144" width="343" height="26"/>
                                 <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pxb-ed-XSy">
-                                <rect key="frame" x="16" y="274" width="343" height="34"/>
+                                <rect key="frame" x="16" y="262" width="343" height="34"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -448,22 +449,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjC-bL-k5q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7105" y="-629"/>
+            <point key="canvasLocation" x="7150" y="-977"/>
         </scene>
-        <!--View Controller-->
+        <!--Note Detail View Controller-->
         <scene sceneID="YdC-Y2-GOd">
             <objects>
-                <viewController id="K84-2k-1nL" sceneMemberID="viewController">
+                <viewController id="K84-2k-1nL" customClass="NoteDetailViewController" customModule="Spot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6UK-W7-YEI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWr-jQ-E8A">
+                                <rect key="frame" x="16" y="60" width="343" height="26"/>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxB-ps-BQI">
+                                <rect key="frame" x="16" y="102" width="343" height="549"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="p8H-br-IA5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bWr-jQ-E8A" firstAttribute="leading" secondItem="p8H-br-IA5" secondAttribute="leading" constant="16" id="7Ii-F5-rzk"/>
+                            <constraint firstItem="bWr-jQ-E8A" firstAttribute="top" secondItem="p8H-br-IA5" secondAttribute="top" constant="16" id="CCJ-6k-m6W"/>
+                            <constraint firstItem="p8H-br-IA5" firstAttribute="trailing" secondItem="bWr-jQ-E8A" secondAttribute="trailing" constant="16" id="GDY-Ff-n1n"/>
+                            <constraint firstItem="p8H-br-IA5" firstAttribute="trailing" secondItem="IxB-ps-BQI" secondAttribute="trailing" constant="16" id="fpy-yB-ANn"/>
+                            <constraint firstItem="IxB-ps-BQI" firstAttribute="top" secondItem="bWr-jQ-E8A" secondAttribute="bottom" constant="16" id="hWq-Ja-ikv"/>
+                            <constraint firstItem="IxB-ps-BQI" firstAttribute="leading" secondItem="p8H-br-IA5" secondAttribute="leading" constant="16" id="maF-eH-1C0"/>
+                            <constraint firstItem="p8H-br-IA5" firstAttribute="bottom" secondItem="IxB-ps-BQI" secondAttribute="bottom" constant="16" id="uw2-aj-0N2"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XgR-bm-ud0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cbW-DG-syH"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DR-hN-6Q8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7105" y="107"/>
+            <point key="canvasLocation" x="7150" y="-251"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CbM-Na-vhZ">
@@ -549,6 +575,40 @@
                     <view key="view" contentMode="scaleToFill" id="ENB-Bs-6uQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THz-zJ-M4F">
+                                <rect key="frame" x="67" y="69" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7u2-dN-gxa">
+                                <rect key="frame" x="87" y="249" width="44" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sg-PE-Mwe">
+                                <rect key="frame" x="87" y="292" width="101" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtW-zZ-F1B">
+                                <rect key="frame" x="87" y="338" width="53" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31p-yX-fIV">
+                                <rect key="frame" x="82" y="396" width="55" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4mU-Pc-wjv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -574,12 +634,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zea-Ud-6kd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6329" y="-1199"/>
+            <point key="canvasLocation" x="6342" y="-1346"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="r20-Iq-oSN"/>
-        <segue reference="vn0-la-jdi"/>
+        <segue reference="wPo-s9-e2p"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>

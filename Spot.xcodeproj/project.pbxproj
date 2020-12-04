@@ -17,6 +17,7 @@
 		B367C27A257301A10014E524 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367C279257301A10014E524 /* SettingsViewController.swift */; };
 		B370901125716A620058D245 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B370901025716A620058D245 /* GoogleService-Info.plist */; };
 		B399AE0425757F4600269EE8 /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399AE0325757F4600269EE8 /* Workouts.swift */; };
+		B3AF13B22579DCA30078C803 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF13B12579DCA30078C803 /* NoteDetailViewController.swift */; };
 		B3C1DB2125717B4300A19548 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1DB2025717B4300A19548 /* TodayViewController.swift */; };
 		B3C1DB2625717B6C00A19548 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1DB2525717B6C00A19548 /* SignUpViewController.swift */; };
 		B3C1DB2D25717C6C00A19548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C1DB2C25717C6C00A19548 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		B367C279257301A10014E524 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B370901025716A620058D245 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B399AE0325757F4600269EE8 /* Workouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
+		B3AF13B12579DCA30078C803 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 		B3C1DB2025717B4300A19548 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		B3C1DB2525717B6C00A19548 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B3C1DB2C25717C6C00A19548 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				B3F2736E257168D500FA81BD /* LoginViewController.swift */,
 				B3C1DB2025717B4300A19548 /* TodayViewController.swift */,
 				B3D7D17A2575643500F0D858 /* WorkoutDetailViewController.swift */,
+				B3AF13B12579DCA30078C803 /* NoteDetailViewController.swift */,
 				B367C276257301980014E524 /* AccountViewController.swift */,
 				B367C279257301A10014E524 /* SettingsViewController.swift */,
 			);
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C1DB2D25717C6C00A19548 /* ViewController.swift in Sources */,
+				B3AF13B22579DCA30078C803 /* NoteDetailViewController.swift in Sources */,
 				B3D7D17B2575643500F0D858 /* WorkoutDetailViewController.swift in Sources */,
 				B3F2736F257168D500FA81BD /* LoginViewController.swift in Sources */,
 				B351FEEE25718D55005BEC6C /* Utilities.swift in Sources */,

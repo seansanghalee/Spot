@@ -15,7 +15,7 @@ class Workout {
     var documentID: String = ""
     
     var dictionary: [String: Any] {
-        return ["name": name, "set": set, "rep": rep, "documentID": documentID]
+        return ["name": name, "set": set, "rep": rep]
     }
     
     init(name: String, set: Int, rep: Int) {
@@ -63,7 +63,6 @@ class Workout {
                 completion(true)
             }
         }
-        
         else {
             let ref = db.collection("sessions").document(session.documentID).collection("workouts").document(self.documentID)
             ref.setData(dataToSave) { (error) in
