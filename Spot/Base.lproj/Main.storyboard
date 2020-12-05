@@ -348,7 +348,7 @@
                                         <state key="normal" image="plus" catalog="system"/>
                                         <connections>
                                             <action selector="plusButtonPressed:" destination="0R8-bW-XXN" eventType="touchUpInside" id="kqs-Vg-nRO"/>
-                                            <segue destination="myS-R9-Ljy" kind="presentation" identifier="AddWorkout" id="ulF-zl-bzU"/>
+                                            <segue destination="KK7-Nu-R4O" kind="show" identifier="AddWorkout" id="JeB-ES-4Yb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgc-RJ-VKn">
@@ -506,27 +506,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IxB-ps-BQI">
-                                <rect key="frame" x="16" y="102" width="343" height="549"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Trying out for a new Bench PR. Right ankle doesn't feel 100% tho." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eSj-qQ-mLK">
+                                <rect key="frame" x="16" y="94" width="343" height="557"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p8H-br-IA5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eSj-qQ-mLK" firstAttribute="leading" secondItem="p8H-br-IA5" secondAttribute="leading" constant="16" id="5Zf-NL-C0H"/>
                             <constraint firstItem="bWr-jQ-E8A" firstAttribute="leading" secondItem="p8H-br-IA5" secondAttribute="leading" constant="16" id="7Ii-F5-rzk"/>
                             <constraint firstItem="bWr-jQ-E8A" firstAttribute="top" secondItem="p8H-br-IA5" secondAttribute="top" constant="16" id="CCJ-6k-m6W"/>
                             <constraint firstItem="p8H-br-IA5" firstAttribute="trailing" secondItem="bWr-jQ-E8A" secondAttribute="trailing" constant="16" id="GDY-Ff-n1n"/>
-                            <constraint firstItem="p8H-br-IA5" firstAttribute="trailing" secondItem="IxB-ps-BQI" secondAttribute="trailing" constant="16" id="fpy-yB-ANn"/>
-                            <constraint firstItem="IxB-ps-BQI" firstAttribute="top" secondItem="bWr-jQ-E8A" secondAttribute="bottom" constant="16" id="hWq-Ja-ikv"/>
-                            <constraint firstItem="IxB-ps-BQI" firstAttribute="leading" secondItem="p8H-br-IA5" secondAttribute="leading" constant="16" id="maF-eH-1C0"/>
-                            <constraint firstItem="p8H-br-IA5" firstAttribute="bottom" secondItem="IxB-ps-BQI" secondAttribute="bottom" constant="16" id="uw2-aj-0N2"/>
+                            <constraint firstItem="eSj-qQ-mLK" firstAttribute="top" secondItem="bWr-jQ-E8A" secondAttribute="bottom" constant="8" id="KiY-hj-h64"/>
+                            <constraint firstItem="p8H-br-IA5" firstAttribute="trailing" secondItem="eSj-qQ-mLK" secondAttribute="trailing" constant="16" id="nlz-3c-c2D"/>
+                            <constraint firstItem="p8H-br-IA5" firstAttribute="bottom" secondItem="eSj-qQ-mLK" secondAttribute="bottom" constant="16" id="wW4-ED-xVX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XgR-bm-ud0">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cbW-DG-syH"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cbW-DG-syH">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="K84-2k-1nL" id="01S-U2-rpx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="noteTextView" destination="eSj-qQ-mLK" id="ssl-Ld-Ggo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DR-hN-6Q8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -669,28 +678,10 @@
             </objects>
             <point key="canvasLocation" x="5532" y="106.59670164917542"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="krD-rL-mD5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="myS-R9-Ljy" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xMU-Nk-Ghi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="KK7-Nu-R4O" kind="relationship" relationship="rootViewController" id="vn0-la-jdi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zea-Ud-6kd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6342" y="-1346"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="r20-Iq-oSN"/>
-        <segue reference="wPo-s9-e2p"/>
+        <segue reference="JeB-ES-4Yb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Gym" width="4000" height="6000"/>
@@ -710,6 +701,9 @@
         <namedColor name="SpotWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

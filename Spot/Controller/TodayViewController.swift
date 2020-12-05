@@ -22,14 +22,14 @@ class TodayViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = "Today"
         
         // load a session from Firebase. If today's session doesn't exist, create a new session
-        session = Session()
-        session.loadData {
-            print("Session loaded: \(self.session.documentID)")
-            self.updateUI()
-        }
+//        session = Session()
+//        session.loadData {
+//            print("Session loaded: \(self.session.documentID)")
+//            self.updateUI()
+//        }
         
         // load workouts from Firebase using session. If workouts don't exist, create new workouts.
-        workouts = Workouts()
+//        workouts = Workouts()
     }
     
     override func viewDidLoad() {
@@ -40,6 +40,14 @@ class TodayViewController: UIViewController {
         // set up table view
         tableView.delegate = self
         tableView.dataSource = self
+        
+        session = Session()
+        session.loadData {
+            print("Session loaded: \(self.session.documentID)")
+            self.updateUI()
+        }
+        
+        workouts = Workouts()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -84,8 +92,7 @@ class TodayViewController: UIViewController {
             if let selectedPath = tableView.indexPathForSelectedRow {
                 tableView.deselectRow(at: selectedPath, animated: false)
             }
-            let navigationController = segue.destination as! UINavigationController
-            let destination = navigationController.viewControllers.first as! WorkoutDetailViewController
+            let destination = segue.destination as! WorkoutDetailViewController
             destination.session = session
             
         case "EditNote":

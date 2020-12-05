@@ -38,13 +38,7 @@ class WorkoutDetailViewController: UIViewController {
     }
     
     func leaveViewController() {
-        let isPresentingInAddMode = presentingViewController is UINavigationController
-        if isPresentingInAddMode {
-            dismiss(animated: true, completion: nil)
-        }
-        else {
-            navigationController?.popViewController(animated: true)
-        }
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
