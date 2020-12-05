@@ -9,6 +9,8 @@ import UIKit
 
 class AccountViewController: UIViewController {
     
+    var user: User!
+    
     override func viewWillAppear(_ animated: Bool) {
         // set up navigation controller title
         self.navigationController?.navigationBar.topItem?.title = "Account"
@@ -16,6 +18,10 @@ class AccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if user == nil {
+            user = User()
+        }
     }
     
 }
