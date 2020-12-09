@@ -36,7 +36,7 @@ class Workout {
         self.init(name: name, set: set, rep: rep)
     }
     
-    func saveData(session: Session, completion: @escaping (Bool) ->()) {
+    func saveData(session: Session, completion: @escaping (Bool) -> ()) {
         let db = Firestore.firestore()
         
         let dataToSave: [String: Any] = self.dictionary
@@ -57,6 +57,19 @@ class Workout {
                 guard error == nil else {
                     return completion(false)
                 }
+                completion(true)
+            }
+        }
+    }
+    
+    func deleteData(session: Session, completion: @escaping (Bool) -> ()) {
+        let db = Firestore.firestore()
+        db.collection("sessions").document(session.documentID).collection("workouts").document(documentID).delete { (error) in
+            if let error = error {
+                print("Error deleting workout document: \(error.localizedDescription)")
+                completion(false)
+            } else {
+                print("Successfully deleted \(self.documentID)")
                 completion(true)
             }
         }

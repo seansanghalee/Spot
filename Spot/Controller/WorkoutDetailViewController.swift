@@ -12,8 +12,11 @@ class WorkoutDetailViewController: UIViewController {
     @IBOutlet weak var setTextField: UITextField!
     @IBOutlet weak var repTextField: UITextField!
     
+    @IBOutlet weak var deleteButton: UIButton!
+    
     var session: Session!
     var workout: Workout!
+    var isAdding: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,7 @@ class WorkoutDetailViewController: UIViewController {
         nameTextField.text = workout.name
         setTextField.text = workout.set
         repTextField.text = workout.rep
+        deleteButton.isHidden = isAdding
     }
     
     func updateFromUI() {
@@ -49,6 +53,16 @@ class WorkoutDetailViewController: UIViewController {
                 self.leaveViewController()
             } else {
                 print("Unable to save data")
+            }
+        }
+    }
+    
+    @IBAction func deleteButtonPressed(_ sender: UIButton) {
+        workout.deleteData(session: session) { (success) in
+            if success {
+                self.leaveViewController()
+            } else {
+                print("Unable to delete data")
             }
         }
     }

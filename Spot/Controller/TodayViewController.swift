@@ -10,6 +10,10 @@ import Firebase
 
 class TodayViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noteLabel: UILabel!
     
@@ -87,6 +91,7 @@ class TodayViewController: UIViewController {
             let index = tableView.indexPathForSelectedRow!.row
             destination.workout = workouts.workoutArray[index]
             destination.session = session
+            destination.isAdding = false
             
         case "AddWorkout":
             if let selectedPath = tableView.indexPathForSelectedRow {
@@ -94,6 +99,7 @@ class TodayViewController: UIViewController {
             }
             let destination = segue.destination as! WorkoutDetailViewController
             destination.session = session
+            destination.isAdding = true
             
         case "EditNote":
             let destination = segue.destination as! NoteDetailViewController
@@ -130,6 +136,9 @@ class TodayViewController: UIViewController {
     
     @IBAction func rightButtonPressed(_ sender: UIButton) {
         // load next session
+    }
+    
+    @IBAction func editButtonPressed(_ sender: UIButton) {
     }
     
     @IBAction func plusButtonPressed(_ sender: UIButton) {
