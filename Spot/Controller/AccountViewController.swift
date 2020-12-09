@@ -51,15 +51,44 @@ class AccountViewController: UIViewController {
         if (user.height == "" || user.weight == "") {
             bmiLabel.text = ""
         } else {
-            let heightInDouble = Double(user.height)
+            let heightInDouble = Double(user.height)! / 100
             let weightInDouble = Double(user.weight)
-            let bmi = weightInDouble! / pow(heightInDouble!, 2)
+            let bmi = weightInDouble! / pow(heightInDouble, 2)
             bmiLabel.text = String(format: "%.2f", bmi)
         }
+        
         benchPressMaxTextField.text = user.benchPressMax
         deadliftMaxTextField.text = user.deadliftMax
         squatTextField.text = user.squatMax
-        totalMaxLabel.text = "kg"
+        
+        var benchPressMaxInDouble: Double!
+        var deadliftMaxInDouble: Double!
+        var squatMaxInDouble: Double!
+        
+        if user.benchPressMax == "" {
+            benchPressMaxInDouble = 0.0
+        } else {
+            benchPressMaxInDouble = Double(user.benchPressMax)
+        }
+        
+        if user.deadliftMax == "" {
+            deadliftMaxInDouble = 0.0
+        } else {
+            deadliftMaxInDouble = Double(user.deadliftMax)
+        }
+        
+        if user.squatMax == "" {
+            squatMaxInDouble = 0.0
+        } else {
+            squatMaxInDouble = Double(user.squatMax)
+        }
+        
+        let total = benchPressMaxInDouble + deadliftMaxInDouble + squatMaxInDouble
+        if total == 0.0 {
+            totalMaxLabel.text = ""
+        }
+        
+        totalMaxLabel.text = "\(total) kg"
     }
     
     func updateFromUI() {
@@ -79,7 +108,8 @@ class AccountViewController: UIViewController {
     
     @IBAction func editButtonPressed(_ sender: UIButton) {
         if editButton.titleLabel?.text == "Edit" {
-            editButton.setTitle("Save", for: .normal)
+            
+            editButton.setTitle("Done", for: .normal)
             dateOfBirthTextField.borderStyle = .roundedRect
             dateOfBirthTextField.isUserInteractionEnabled = true
             heightTextField.borderStyle = .roundedRect
@@ -92,8 +122,10 @@ class AccountViewController: UIViewController {
             deadliftMaxTextField.isUserInteractionEnabled = true
             squatTextField.borderStyle = .roundedRect
             squatTextField.isUserInteractionEnabled = true
+            
         } else {
             updateFromUI()
+            
             editButton.setTitle("Edit", for: .normal)
             dateOfBirthTextField.borderStyle = .none
             dateOfBirthTextField.isUserInteractionEnabled = false
