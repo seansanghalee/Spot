@@ -37,4 +37,53 @@ class Photo {
         
         self.init(image: UIImage(), date: date, photoURL: photoURL, documentID: "")
     }
+    
+    func saveData(user: User, completion: @escaping (Bool) -> ()) {
+        let db = Firestore.firestore()
+        let storage = Storage.storage()
+        
+        guard let photoData = self.image.jpegData(compressionQuality: 0.5) else {
+            print("Error coverting image")
+            return
+        }
+        
+        let uploadMetaData = StorageMetadata()
+        uploadMetaData.contentType = "image/jpeg"
+        
+        if documentID == "" {
+            documentID = UUID().uuidString
+        }
+        
+        let storageRef = storage.reference().child(user.documentID).child(documentID)
+        
+        let uploadTask = storageRef.putData(photoData, metadata: uploadMetaData) { (metadata, error) in
+            if let error = error {
+                print("Error uploading photo: \(error.localizedDescription)")
+            }
+        }
+        
+        uploadTask.observe(.success) { (snapshot) in
+            print("Upload successful")
+            
+            // save to photos collection in user document
+            let dataToSave: [String: Any] = self.dictionary
+            let ref = db.collection("users").document(user.documentID).collection("photos").document(self.documentID)
+            ref.setData(dataToSave) { (error) in
+                guard error == nil else {
+                    return completion(false)
+                }
+                completion(true)
+            }
+            
+            completion(true)
+        }
+        
+        uploadTask.observe(.failure) { (snapshot) in
+            if let error = snapshot.error {
+                print("Error upload task: \(error.localizedDescription)")
+            }
+            completion(false)
+        }
+        
+    }
 }

@@ -44,7 +44,16 @@ class ProgressViewController: UIViewController {
                 print("Error getting selected collection view item")
                 return
             }
+            destination.user = self.user
             destination.photo = photos.photoArray[selectedIndexPath.row]
+            destination.isAdding = false;
+        }
+        
+        if segue.identifier == "RecordProgress" {
+            let destination = segue.destination as! ProgressDetailViewController
+            destination.user = self.user
+            destination.photo = self.photo
+            destination.isAdding = true;
         }
     }
     
