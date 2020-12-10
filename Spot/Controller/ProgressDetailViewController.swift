@@ -8,6 +8,7 @@
 import UIKit
 
 class ProgressDetailViewController: UIViewController {
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var deleteButton: UIButton!
@@ -25,6 +26,8 @@ class ProgressDetailViewController: UIViewController {
         
         if isAdding {
             deleteButton.isHidden = true;
+        } else {
+            saveButton.isEnabled = false
         }
         
         if photo == nil {

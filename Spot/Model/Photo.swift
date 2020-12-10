@@ -84,6 +84,24 @@ class Photo {
             }
             completion(false)
         }
-        
     }
+    
+    func loadImage(user: User, completion: @escaping (Bool) -> ()) {
+        guard user.documentID != "" else {
+            print("Error passing user's document ID")
+            return
+        }
+        let storage = Storage.storage()
+        let storageRef = storage.reference().child(user.documentID).child(documentID)
+        storageRef.getData(maxSize: 25 * 1024 * 1024) { (data, error) in
+            if let error = error {
+                print("Error reading data: \(error.localizedDescription)")
+                return completion(false)
+            } else {
+                self.image = UIImage(data: data!) ?? UIImage()
+                return completion(true)
+            }
+        }
+    }
+    
 }

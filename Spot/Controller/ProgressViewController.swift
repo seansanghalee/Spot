@@ -38,7 +38,9 @@ class ProgressViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowProgress" {
+        switch segue.identifier {
+        
+        case "ShowProgress":
             let destination = segue.destination as! ProgressDetailViewController
             guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first else {
                 print("Error getting selected collection view item")
@@ -47,13 +49,15 @@ class ProgressViewController: UIViewController {
             destination.user = self.user
             destination.photo = photos.photoArray[selectedIndexPath.row]
             destination.isAdding = false;
-        }
-        
-        if segue.identifier == "RecordProgress" {
+            
+        case "RecordProgress":
             let destination = segue.destination as! ProgressDetailViewController
             destination.user = self.user
             destination.photo = self.photo
             destination.isAdding = true;
+            
+        default:
+            print("Error preparing segue")
         }
     }
     
@@ -87,7 +91,9 @@ extension ProgressViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let photoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath)
+        let photoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! ProgressCollectionViewCell
+        photoCell.user = self.user
+        photoCell.photo = photos.photoArray[indexPath.row]
         return photoCell
     }
     
