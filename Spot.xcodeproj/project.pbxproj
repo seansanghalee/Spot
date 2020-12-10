@@ -16,6 +16,13 @@
 		B367C26E2572EBFA0014E524 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367C26D2572EBFA0014E524 /* Workout.swift */; };
 		B367C277257301980014E524 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367C276257301980014E524 /* AccountViewController.swift */; };
 		B367C27A257301A10014E524 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367C279257301A10014E524 /* SettingsViewController.swift */; };
+		B36F79A92581BF2900D908DF /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F79A82581BF2900D908DF /* ProgressViewController.swift */; };
+		B36F79AC2581C1BE00D908DF /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F79AB2581C1BE00D908DF /* Photo.swift */; };
+		B36F79AF2581C1C600D908DF /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F79AE2581C1C600D908DF /* Photos.swift */; };
+		B36F79B62581C32E00D908DF /* ProgressDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F79B52581C32E00D908DF /* ProgressDetailViewController.swift */; };
+		B36F79B92581C35000D908DF /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F79B82581C35000D908DF /* ProgressCollectionViewCell.swift */; };
+		B36F7A502581CC7700D908DF /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F7A4F2581CC7700D908DF /* Setting.swift */; };
+		B36F7A532581CCB700D908DF /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F7A522581CCB700D908DF /* SettingsTableViewCell.swift */; };
 		B370901125716A620058D245 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B370901025716A620058D245 /* GoogleService-Info.plist */; };
 		B399AE0425757F4600269EE8 /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399AE0325757F4600269EE8 /* Workouts.swift */; };
 		B3AF13B22579DCA30078C803 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF13B12579DCA30078C803 /* NoteDetailViewController.swift */; };
@@ -43,6 +50,13 @@
 		B367C26D2572EBFA0014E524 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		B367C276257301980014E524 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		B367C279257301A10014E524 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B36F79A82581BF2900D908DF /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		B36F79AB2581C1BE00D908DF /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		B36F79AE2581C1C600D908DF /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		B36F79B52581C32E00D908DF /* ProgressDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDetailViewController.swift; sourceTree = "<group>"; };
+		B36F79B82581C35000D908DF /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
+		B36F7A4F2581CC7700D908DF /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		B36F7A522581CCB700D908DF /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		B370901025716A620058D245 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B399AE0325757F4600269EE8 /* Workouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
 		B3AF13B12579DCA30078C803 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +119,9 @@
 				B367C26D2572EBFA0014E524 /* Workout.swift */,
 				B399AE0325757F4600269EE8 /* Workouts.swift */,
 				B31EF9E2257B526F0085E4CF /* User.swift */,
+				B36F79AB2581C1BE00D908DF /* Photo.swift */,
+				B36F79AE2581C1C600D908DF /* Photos.swift */,
+				B36F7A4F2581CC7700D908DF /* Setting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				B34EF17925740172005C2EA0 /* WorkoutTableViewCell.swift */,
+				B36F79B82581C35000D908DF /* ProgressCollectionViewCell.swift */,
+				B36F7A522581CCB700D908DF /* SettingsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +146,8 @@
 				B3D7D17A2575643500F0D858 /* WorkoutDetailViewController.swift */,
 				B3AF13B12579DCA30078C803 /* NoteDetailViewController.swift */,
 				B367C276257301980014E524 /* AccountViewController.swift */,
+				B36F79A82581BF2900D908DF /* ProgressViewController.swift */,
+				B36F79B52581C32E00D908DF /* ProgressDetailViewController.swift */,
 				B367C279257301A10014E524 /* SettingsViewController.swift */,
 			);
 			path = Controller;
@@ -303,19 +324,26 @@
 			files = (
 				B3C1DB2D25717C6C00A19548 /* ViewController.swift in Sources */,
 				B3AF13B22579DCA30078C803 /* NoteDetailViewController.swift in Sources */,
+				B36F7A532581CCB700D908DF /* SettingsTableViewCell.swift in Sources */,
 				B3D7D17B2575643500F0D858 /* WorkoutDetailViewController.swift in Sources */,
 				B3F2736F257168D500FA81BD /* LoginViewController.swift in Sources */,
 				B351FEEE25718D55005BEC6C /* Utilities.swift in Sources */,
+				B36F79B62581C32E00D908DF /* ProgressDetailViewController.swift in Sources */,
+				B36F7A502581CC7700D908DF /* Setting.swift in Sources */,
 				B3F2736B257168D500FA81BD /* AppDelegate.swift in Sources */,
 				B3F2736D257168D500FA81BD /* SceneDelegate.swift in Sources */,
 				B31EF9E3257B526F0085E4CF /* User.swift in Sources */,
+				B36F79AF2581C1C600D908DF /* Photos.swift in Sources */,
 				B367C26E2572EBFA0014E524 /* Workout.swift in Sources */,
 				B3C1DB2125717B4300A19548 /* TodayViewController.swift in Sources */,
 				B3C1DB2625717B6C00A19548 /* SignUpViewController.swift in Sources */,
 				B34EF17A25740172005C2EA0 /* WorkoutTableViewCell.swift in Sources */,
+				B36F79AC2581C1BE00D908DF /* Photo.swift in Sources */,
 				B34EF1772573FC21005C2EA0 /* Session.swift in Sources */,
+				B36F79B92581C35000D908DF /* ProgressCollectionViewCell.swift in Sources */,
 				B399AE0425757F4600269EE8 /* Workouts.swift in Sources */,
 				B351FEF1257195A9005BEC6C /* Constants.swift in Sources */,
+				B36F79A92581BF2900D908DF /* ProgressViewController.swift in Sources */,
 				B367C277257301980014E524 /* AccountViewController.swift in Sources */,
 				B367C27A257301A10014E524 /* SettingsViewController.swift in Sources */,
 			);
