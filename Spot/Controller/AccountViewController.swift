@@ -9,6 +9,7 @@ import UIKit
 
 class AccountViewController: UIViewController {
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var addPhotoButton: UIButton!
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -42,6 +43,8 @@ class AccountViewController: UIViewController {
     }
     
     func updateUI() {
+        addPhotoButton.isHidden = true
+        
         nameTextField.text = "\(user.firstName) \(user.lastName)"
         emailTextField.text = user.email
         dateOfBirthTextField.text = user.dateOfBirth
@@ -110,6 +113,7 @@ class AccountViewController: UIViewController {
         if editButton.titleLabel?.text == "Edit" {
             
             editButton.setTitle("Done", for: .normal)
+            addPhotoButton.isHidden = false
             dateOfBirthTextField.borderStyle = .roundedRect
             dateOfBirthTextField.isUserInteractionEnabled = true
             heightTextField.borderStyle = .roundedRect
@@ -127,6 +131,7 @@ class AccountViewController: UIViewController {
             updateFromUI()
             
             editButton.setTitle("Edit", for: .normal)
+            addPhotoButton.isHidden = true
             dateOfBirthTextField.borderStyle = .none
             dateOfBirthTextField.isUserInteractionEnabled = false
             heightTextField.borderStyle = .none
@@ -141,5 +146,8 @@ class AccountViewController: UIViewController {
             squatTextField.isUserInteractionEnabled = false
         }
         
+    }
+    
+    @IBAction func addPhotoButtonPressed(_ sender: UIButton) {
     }
 }
