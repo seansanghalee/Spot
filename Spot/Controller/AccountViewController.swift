@@ -89,9 +89,10 @@ class AccountViewController: UIViewController {
         let total = benchPressMaxInDouble + deadliftMaxInDouble + squatMaxInDouble
         if total == 0.0 {
             totalMaxLabel.text = ""
+        } else { 
+            totalMaxLabel.text = "\(total) kg"
         }
         
-        totalMaxLabel.text = "\(total) kg"
     }
     
     func updateFromUI() {

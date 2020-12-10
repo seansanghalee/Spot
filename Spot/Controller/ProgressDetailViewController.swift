@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProgressDetailViewController: UIViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -42,7 +43,16 @@ class ProgressDetailViewController: UIViewController {
         dateFormatter.timeStyle = .none
         
         dateLabel.text = "\(dateFormatter.string(from: photo.date))"
-        imageView.image = photo.image
+        
+        guard let url = URL(string: photo.photoURL) else {
+            print("URL didn't work")
+            imageView.image = photo.image
+            return
+        }
+        
+        imageView.sd_imageTransition = .fade
+        imageView.sd_imageTransition?.duration = 0.5
+        imageView.sd_setImage(with: url)
     }
     
     func leaveViewController() {

@@ -65,17 +65,29 @@ class Photo {
         uploadTask.observe(.success) { (snapshot) in
             print("Upload successful")
             
-            // save to photos collection in user document
-            let dataToSave: [String: Any] = self.dictionary
-            let ref = db.collection("users").document(user.documentID).collection("photos").document(self.documentID)
-            ref.setData(dataToSave) { (error) in
+            storageRef.downloadURL { (url, error) in
                 guard error == nil else {
+                    print("Error downloading URL: \(error!.localizedDescription)")
                     return completion(false)
                 }
+                guard let url = url else {
+                    return completion(false)
+                }
+                self.photoURL = "\(url)"
+                
+                // save to photos collection in user document
+                let dataToSave: [String: Any] = self.dictionary
+                let ref = db.collection("users").document(user.documentID).collection("photos").document(self.documentID)
+                ref.setData(dataToSave) { (error) in
+                    guard error == nil else {
+                        return completion(false)
+                    }
+                    completion(true)
+                }
+                
                 completion(true)
             }
             
-            completion(true)
         }
         
         uploadTask.observe(.failure) { (snapshot) in
